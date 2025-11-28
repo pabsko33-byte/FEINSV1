@@ -51,13 +51,14 @@
           <div class="hero-left">
             <p class="hero-tagline">Club finance • FEIS</p>
             <h1 class="hero-title">
-              Comprendre les marchés<br />
-              avant d’y mettre <span class="hero-highlight">1&nbsp;€</span>.
-            </h1>
-            <p class="hero-sub">
-              FEIS est un studio étudiant pour apprendre à lire indices, macro, politique
-              et risques comme un desk pro, tout en restant indépendant des banques.
-            </p>
+        <h1 class="hero-title">
+  Lire les marchés comme un professionnel.
+</h1>
+<p class="hero-sub">
+  FEIS est un studio étudiant qui apprend à lire indices, macro et risques
+  avec une méthode structurée : scénarios, données, discipline. Pas de promesse
+  magique, juste une grille de lecture sérieuse.
+</p>
 
             <div class="hero-chips">
               <span>ETF &amp; indices</span>
@@ -96,120 +97,80 @@
       </section>
 
       <!-- MARCHÉS -->
-      <section id="markets" class="section section-markets reveal">
-        <header class="section-head">
-          <div>
-            <p class="eyebrow">Board marchés &amp; crypto</p>
-            <h2>Vue marchés du jour (maquette FEIS)</h2>
-            <p class="section-desc">
-              Un mini-board indices &amp; crypto pour s’entraîner à lire une
-              journée de marché : niveaux, variations, lecture rapide.
-            </p>
-          </div>
-          <div class="section-head-actions">
-            <button class="btn small" id="refresh-markets">Simuler une nouvelle séance</button>
-          </div>
-        </header>
+      <section id="markets" class="section markets-section reveal">
+  <div class="section-inner">
 
-        <div class="markets-layout">
-          <div class="markets-column">
-            <h3>Indices actions</h3>
-            <div class="market-grid" data-group="indices">
-              <article class="market-card" data-symbol="CAC 40">
-                <div class="market-main">
-                  <span class="market-name">CAC 40</span>
-                  <span class="market-value" data-base="7420.15">7420.15</span>
-                </div>
-                <div class="market-meta">
-                  <span class="market-change">+0.32%</span>
-                  <button class="market-more" data-detail="cac">Détail</button>
-                </div>
-              </article>
+    <h2 class="section-title">Vue marchés & données</h2>
+    <p class="section-sub">
+      Lecture temps réel (indices, ETF, crypto) — données tirées plus tard via API Finance (Yahoo Finance / Alpha Vantage).
+    </p>
 
-              <article class="market-card" data-symbol="S&amp;P 500">
-                <div class="market-main">
-                  <span class="market-name">S&amp;P 500</span>
-                  <span class="market-value" data-base="5098.42">5098.42</span>
-                </div>
-                <div class="market-meta">
-                  <span class="market-change">-0.27%</span>
-                  <button class="market-more" data-detail="spx">Détail</button>
-                </div>
-              </article>
+    <div class="markets-grid">
 
-              <article class="market-card" data-symbol="NASDAQ 100">
-                <div class="market-main">
-                  <span class="market-name">NASDAQ 100</span>
-                  <span class="market-value" data-base="18045.90">18045.90</span>
-                </div>
-                <div class="market-meta">
-                  <span class="market-change">+0.61%</span>
-                  <button class="market-more" data-detail="ndx">Détail</button>
-                </div>
-              </article>
-
-              <article class="market-card" data-symbol="MSCI World">
-                <div class="market-main">
-                  <span class="market-name">MSCI World</span>
-                  <span class="market-value" data-base="3220.70">3220.70</span>
-                </div>
-                <div class="market-meta">
-                  <span class="market-change">+0.18%</span>
-                  <button class="market-more" data-detail="msci">Détail</button>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="markets-column">
-            <h3>Crypto labo</h3>
-            <div class="market-grid" data-group="crypto">
-              <article class="market-card" data-symbol="Bitcoin">
-                <div class="market-main">
-                  <span class="market-name">Bitcoin</span>
-                  <span class="market-value" data-base="68440">68440</span>
-                </div>
-                <div class="market-meta">
-                  <span class="market-change">+1.25%</span>
-                  <button class="market-more" data-detail="btc">Détail</button>
-                </div>
-              </article>
-
-              <article class="market-card" data-symbol="Ethereum">
-                <div class="market-main">
-                  <span class="market-name">Ethereum</span>
-                  <span class="market-value" data-base="3905">3905</span>
-                </div>
-                <div class="market-meta">
-                  <span class="market-change">-0.80%</span>
-                  <button class="market-more" data-detail="eth">Détail</button>
-                </div>
-              </article>
-
-              <article class="market-card" data-symbol="ETF World">
-                <div class="market-main">
-                  <span class="market-name">ETF World</span>
-                  <span class="market-value" data-base="92.30">92.30</span>
-                </div>
-                <div class="market-meta">
-                  <span class="market-change">+0.21%</span>
-                  <button class="market-more" data-detail="etf-world">Détail</button>
-                </div>
-              </article>
-
-              <article class="market-card" data-symbol="Cash €">
-                <div class="market-main">
-                  <span class="market-name">Cash &euro;</span>
-                  <span class="market-value" data-base="1.00">1.00</span>
-                </div>
-                <div class="market-meta">
-                  <span class="market-change flat">0.00%</span>
-                  <button class="market-more" data-detail="cash">Rôle</button>
-                </div>
-              </article>
-            </div>
-          </div>
+      <!-- INDICES -->
+      <div class="market-card">
+        <div class="market-card-header">
+          <h3>Indices actions</h3>
         </div>
+
+        <div class="market-item">
+          <span class="market-name">S&P 500</span>
+          <span id="sp500-value" class="market-value">--</span>
+          <span id="sp500-change" class="market-change">--</span>
+          <button class="btn-sm" onclick="openChart('sp500')">Voir graphique</button>
+        </div>
+
+        <div class="market-item">
+          <span class="market-name">NASDAQ 100</span>
+          <span id="nasdaq-value" class="market-value">--</span>
+          <span id="nasdaq-change" class="market-change">--</span>
+          <button class="btn-sm" onclick="openChart('nasdaq')">Voir graphique</button>
+        </div>
+
+        <div class="market-item">
+          <span class="market-name">CAC 40</span>
+          <span id="cac-value" class="market-value">--</span>
+          <span id="cac-change" class="market-change">--</span>
+          <button class="btn-sm" onclick="openChart('cac40')">Voir graphique</button>
+        </div>
+
+      </div>
+
+
+      <!-- CRYPTO -->
+      <div class="market-card">
+        <div class="market-card-header">
+          <h3>Crypto labo</h3>
+        </div>
+
+        <div class="market-item">
+          <span class="market-name">Bitcoin</span>
+          <span id="btc-value" class="market-value">--</span>
+          <span id="btc-change" class="market-change">--</span>
+          <button class="btn-sm" onclick="openChart('btc')">Voir graphique</button>
+        </div>
+
+        <div class="market-item">
+          <span class="market-name">Ethereum</span>
+          <span id="eth-value" class="market-value">--</span>
+          <span id="eth-change" class="market-change">--</span>
+          <button class="btn-sm" onclick="openChart('eth')">Voir graphique</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CONTAINER DU GRAPHIQUE -->
+    <div id="chart-modal" class="chart-modal hidden">
+      <div class="chart-box">
+        <button class="close-chart" onclick="closeChart()">×</button>
+        <canvas id="marketChart"></canvas>
+      </div>
+    </div>
+
+  </div>
+</section>
 
         <div class="market-disclaimer">
           Vue pédagogique uniquement. Vraies données = à brancher plus tard sur une API
