@@ -638,3 +638,68 @@ body {
     align-items: flex-start;
   }
 }
+/* --- MODAL CHART --- */
+
+#chart-modal.hidden {
+  display: none;
+}
+
+#chart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn .3s ease-out;
+}
+
+.chart-window {
+  background: #111;
+  border-radius: 16px;
+  width: 85%;
+  max-width: 900px;
+  padding: 24px;
+  box-shadow: 0 0 35px rgba(0,0,0,0.4);
+  animation: slideUp .35s ease-out;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.chart-header h2 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
