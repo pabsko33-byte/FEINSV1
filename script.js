@@ -118,3 +118,13 @@ document.querySelectorAll(".market-more").forEach((btn) => {
     showDetail(details[key]);
   });
 });
+function openChart(asset) {
+  document.getElementById("chart-modal").classList.remove("hidden");
+
+  // futur graph API ici
+  console.log("Load chart for:", asset);
+}
+
+function closeChart() {
+  document.getElementById("chart-modal").classList.add("hidden");
+}
